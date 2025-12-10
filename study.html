@@ -6,16 +6,53 @@
   <title>Study Guide - Myanmar Students Support</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .study-hero {
+      background: url('img/study_bg.jpg') center center/cover no-repeat;
+      height: 60vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    .study-hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+    .study-hero h1 {
+      position: relative;
+      z-index: 1;
+      font-weight: bold;
+    }
+    .study-card img {
+      border-radius: 10px 10px 0 0;
+      height: 180px;
+      object-fit: cover;
+    }
+    .study-card {
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .study-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+  </style>
 </head>
+
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
     <div class="container-fluid px-4">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="img/logo.png" alt="Logo" width="50" height="50" class="me-2 rounded-logo">
         <span>Myanmar Students Support</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -32,17 +69,72 @@
     </div>
   </nav>
 
-  <!-- Study Section -->
+  <!-- Hero -->
+  <section class="study-hero text-center">
+    <h1 class="display-5">📖 Study Guide for Myanmar Students</h1>
+  </section>
+
+  <!-- Study Introduction -->
   <section class="container py-5">
-    <h2 class="text-center mb-4">Study Guide / စာသင်အကြံပြုချက်</h2>
-    <p>
-      Studying in a new country can be challenging. We provide helpful advice on school curriculums, 
-      learning styles, and effective study tips to help you adapt easily and succeed.
+    <h2 class="text-center mb-4 fw-bold">Smart Study, Better Results</h2>
+    <p class="text-center">
+      Studying in a new country can be challenging. This guide helps you organize your study habits, manage your time, and prepare confidently for quizzes, mid-terms, and final exams.
     </p>
-    <p class="text-muted">
-      ကျောင်းတက်တဲ့အခါမှာ လိုအပ်တဲ့ သင်ရိုးညွှန်းချက်များ၊ သင်ကြားပုံစံများနဲ့ စာဖတ်နည်းအကြံပြုချက်များကို 
-      အတူတကွ သင်ယူဖို့အတွက် ကူညီပေးပါတယ်။
+    <p class="text-center text-muted">
+      နိုင်ငံခြားမှာ စာသင်ရတာ လွယ်တာမဟုတ်ပါ။ ဒီနေရာမှာ သင့်အတွက် စာဖတ်နည်း၊ အချိန်စီမံနည်းနဲ့ စမ်းသပ်မေးခွန်းတွေအတွက် ပြင်ဆင်နည်းတွေကို မျှဝေထားပါတယ်။
     </p>
+  </section>
+
+  <!-- Study Tips Cards -->
+  <section class="container pb-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card study-card h-100 shadow-sm">
+          <img src="img/selfstudy.jpg" alt="Self Study">
+          <div class="card-body">
+            <h5 class="card-title">1️⃣ Self-Study After Class</h5>
+            <p class="card-text">
+              Review lecture notes daily. Rewrite key points in your own words. Practice questions after each topic. Use YouTube or Coursera for clearer understanding.
+            </p>
+            <p class="text-muted">တစ်နေ့စာသင်ပြီးတာနဲ့ ထပ်ပြီး ပြန်လေ့ကျင့်ပါ။ အကြောင်းအရာတွေကို ကိုယ့်ဘာသာနဲ့ ရေးပြီး သုံးသပ်ပါ။</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card study-card h-100 shadow-sm">
+          <img src="img/time_management.jpg" alt="Time Management">
+          <div class="card-body">
+            <h5 class="card-title">2️⃣ Time Management</h5>
+            <p class="card-text">
+              Use the “Pomodoro Technique”: 25 minutes study + 5 minutes rest. Prioritize hard subjects first. Plan weekly tasks using a planner or app like Notion or Google Calendar.
+            </p>
+            <p class="text-muted">အချိန်တစ်ခုချင်းစီကို အကျိုးရှိအောင် အသုံးချပါ။ တစ်ပတ်စာ လုပ်စရာတွေကို စီစဉ်ထားပါ။</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card study-card h-100 shadow-sm">
+          <img src="img/exam_preparation.jpg" alt="Exam Preparation">
+          <div class="card-body">
+            <h5 class="card-title">3️⃣ Quiz & Exam Preparation</h5>
+            <p class="card-text">
+              Don’t cram the night before. Revise bit by bit every day. Solve old papers and focus on understanding rather than memorizing. Sleep well before exam day!
+            </p>
+            <p class="text-muted">စာစမ်းမတိုင်ခင် ပြန်လေ့ကျင့်ပါ။ အရင်က မေးခွန်းတွေ လေ့လာပြီး နားလည်မှုအပေါ် အခြေခံပါ။</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Motivation Section -->
+  <section class="py-5 text-white" style="background: linear-gradient(135deg, #0062ff, #4facfe);">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-3">“Study Smart, Stay Consistent.”</h2>
+      <p>Remember: consistency is more powerful than long hours. Learn a little every day — your effort will pay off!</p>
+    </div>
   </section>
 
   <!-- Footer -->

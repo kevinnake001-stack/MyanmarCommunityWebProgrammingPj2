@@ -129,62 +129,60 @@
     $("#toLogin").click(() => showForm("#loginForm"));
     $("#toForgot").click(() => showForm("#forgotForm"));
     $("#backLogin").click(() => showForm("#loginForm"));
-   
 
     // LOGIN ACTION
     $("#l_btn").click((e) => {
-    e.preventDefault();
+      e.preventDefault();
 
-    let email = $("#l_email").val();
-    let pass = $("#l_pass").val();
+      let email = $("#l_email").val();
+      let pass = $("#l_pass").val();
 
-    if (pass.length < 6) {
+      if (pass.length < 6) {
         $("#l_output").text("Password must be at least 6 characters!");
         return;
-    }
+      }
 
-    $("#l_output").text("Login successful! Redirecting to home page in 3 sec...");
-
-    setTimeout(() => {
+      $("#l_output").text("Login successful! Redirecting to home page in 3 sec...");
+      setTimeout(() => {
         window.location.href = "index.html";
-    }, 3000);
+      }, 3000);
     });
-
 
     // REGISTER ACTION
     $("#r_btn").click((e) => {
-     e.preventDefault();
+      e.preventDefault();
 
-     let name = $("#r_name").val();
-     let email = $("#r_email").val();
-     let pass1 = $("#r_pass").val();
-     let pass2 = $("#r_pass2").val();
+      let name = $("#r_name").val();
+      let email = $("#r_email").val();
+      let pass = $("#r_pass").val();
+      let pass2 = $("#r_pass2").val();
 
-    console.log(pass1);
-    console.log(pass2);
+      if (pass !== pass2) {
+        $("#r_output").text("Passwords do not match!");
+        return;
+      }
 
-    if (pass1 !== pass2) {
-       $("#r_output").text("Passwords do not match!");
-       return;
-    }
+      if (pass.length < 6) {
+        $("#r_output").text("Password must be at least 6 characters!");
+        return;
+      }
 
-    if (pass1.length < 6) {
-       $("#r_output").text("Password must be minimum 6 characters!");
-       return;
-    }
-
-    $("#r_output").text("Account created successfully! Redirecting to home page in 3 sec...");
-    setTimeout(() => {
-          window.location.href = "index.html";
-      }, 3000);
+      $("#r_output").text("Account created successfully! Redirecting to login...");
+      setTimeout(() => showForm("#loginForm"), 2000);
     });
-    
+
+    // FORGOT PASSWORD
     $("#f_btn").click((e) => {
       e.preventDefault();
-      $("#f_output").text("A password reset link has been sent to your email.");
+      let email = $("#f_email").val();
+      if (!email.includes("@")) {
+        $("#f_output").text("Please enter a valid email!");
+        return;
+      }
+      $("#f_output").text("Password reset link sent to your email!");
     });
-
   </script>
+
 
 </body>
 </html>
