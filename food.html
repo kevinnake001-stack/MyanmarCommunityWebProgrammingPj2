@@ -6,8 +6,33 @@
   <title>Food & Restaurants - Myanmar Students Support</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .food-card {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .food-card:hover {
+      transform: translateY(-5px);
+    }
+    .food-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .tip-box {
+      background-color: #f8f9fa;
+      border-left: 4px solid #dc3545;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container-fluid px-4">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -31,19 +56,109 @@
     </div>
   </nav>
 
+  <!-- Food Section -->
   <section class="container py-5">
-    <h2 class="text-center mb-4">Food & Restaurants</h2>
-    <p>
-      Explore affordable and delicious restaurants near your area. Many shops around Lippo and Meikarta 
-      offer both Indonesian and Myanmar-style food. You can also use Google Maps for directions easily.
+    <h2 class="text-center mb-4">🍜 Food & Restaurants Around Campus</h2>
+    <p class="text-center text-muted mb-5">
+      Cikarang offers many affordable and tasty food choices — from Indonesian meals to Myanmar-style dishes.  
+      Here are some popular spots near President University and Lippo Cikarang.
     </p>
-    <p class="text-muted">
-      စားသောက်ဆိုင်များကို လေ့လာပြီး စျေးသက်သက်သာသာနဲ့ အရသာရှိတဲ့ အစားအစာတွေကို ရနိုင်ပါတယ်။ 
-      Google Maps နဲ့လည်း လမ်းညွှန်ချက်တွေကို လွယ်လွယ်ကူကူ သွားနိုင်ပါတယ်။
-    </p>
+
+    <div class="row g-4">
+
+      <!-- 1. Campus Canteen -->
+      <div class="col-md-6 col-lg-4">
+        <div class="food-card bg-white">
+          <img src="img/school_canteen.jpg" alt="Campus Canteen" class="food-img">
+          <div class="p-3">
+            <h5 class="fw-bold">🏫 President University Canteen</h5>
+            <p>
+              Located inside campus, the canteen offers cheap meals for students — rice, noodles, chicken, and drinks.
+              You can eat for around <b>IDR 10,000–20,000</b>.
+            </p>
+            <ul>
+              <li>Location: Campus area</li>
+              <li>Price: IDR 10,000–20,000</li>
+              <li>Tip: Come early during lunch hours!</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Local Warung -->
+      <div class="col-md-6 col-lg-4">
+        <div class="food-card bg-white">
+          <img src="img/warung.jpg" alt="Local Warung" class="food-img">
+          <div class="p-3">
+            <h5 class="fw-bold">🍲 Local “Warung” (Street Food)</h5>
+            <p>
+              Small warungs near dorms offer delicious Indonesian food such as <b>Nasi Goreng</b>, <b>Ayam Geprek</b>, 
+              and <b>Tempe</b>. Meals usually cost only IDR 12,000–18,000.
+            </p>
+            <ul>
+              <li>Open: Morning till night</li>
+              <li>Nearby: PU Dorm, Lippo Junction</li>
+              <li>Payment: Cash only</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Restaurants & Cafes -->
+      <div class="col-md-6 col-lg-6">
+        <div class="food-card bg-white">
+          <img src="img/sahabat.jpg" alt="Restaurants" class="food-img">
+          <div class="p-3">
+            <h5 class="fw-bold">🍽️ Restaurants & Cafes</h5>
+            <p>
+              If you want to relax or study with friends, you can visit nearby cafes like <b>Sahabat</b>, <b>Luma</b>, <b>Secret Garden</b>, <b>Excelso</b>, 
+              or <b>Kopital</b> in Lippo Mall. Great for group projects or evening hangouts.
+            </p>
+            <ul>
+              <li>Location: around SBH, Lippo Mall & Meikarta</li>
+              <li>Wi-Fi: Available</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Food Delivery Apps -->
+      <div class="col-md-6 col-lg-6">
+        <div class="food-card bg-white">
+          <img src="img/gofood.jpg" alt="Gojek & GrabFood" class="food-img">
+          <div class="p-3">
+            <h5 class="fw-bold">📱 Food Delivery Apps</h5>
+            <p>
+              Too tired to go out? Order food with <b>Gojek</b> (GoFood) or <b>GrabFood</b>. 
+              Just pin your dorm or apartment location and wait for delivery. Most drivers can understand simple English.
+            </p>
+            <ul>
+              <li>Apps: Gojek, Grab</li>
+              <li>Payment: Cash or E-wallet</li>
+              <li>Delivery Time: 15–30 mins</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Student Tips -->
+    <div class="tip-box">
+      <h5>🍴 Smart Food Tips for Students</h5>
+      <ul>
+        <li>Cook simple meals in your dorm — save money and eat healthier.</li>
+        <li>Try local foods like “Bakso” or “Soto Ayam” — spicy but tasty!</li>
+        <li>Bring a reusable water bottle — the weather is hot and humid.</li>
+        <li>Always check food prices before ordering in new places.</li>
+      </ul>
+      <p class="mt-2 text-muted">
+        ကျောင်းသားအနေနဲ့ အချိန်လွတ်တစ်ချို့မှာ ကိုယ်တိုင်ချက်ပြီး စားခြင်းဟာ ငွေကုန်သက်သာပြီး ကျန်းမာရေးအတွက်ကောင်းပါတယ်။
+      </p>
+    </div>
   </section>
 
-  <footer class="text-center bg-dark text-white py-3">
+  <!-- Footer -->
+  <footer class="text-center bg-dark text-white py-3 mt-5">
     <p>© 2025 Myanmar Community Support | All Rights Reserved</p>
   </footer>
 
